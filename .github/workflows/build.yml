@@ -13,7 +13,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
       - name: Build with Gradle
-        run: gradle build --no-daemon
+        run: gradle build --no-daemon -Dorg.gradle.internal.http.socketTimeout=60000 -Dorg.gradle.internal.http.connectionTimeout=60000
+        env:
+          GRADLE_ENTERPRISE_ACCESS_KEY: ""
       - name: Upload Mod Jar
         uses: actions/upload-artifact@v4
         with:
