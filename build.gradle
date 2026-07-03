@@ -15,11 +15,10 @@ version = '1.0'
 group = 'com.example.playermod'
 archivesBaseName = 'playermod'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(8) // 1.16.5 uchun Java 8 kerak
+java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 minecraft {
     mappings channel: 'official', version: '1.16.5'
-    
     runs {
         client {
             workingDirectory project.file('run')
@@ -41,7 +40,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.34' // 1.16.5 ning eng barqaror Forge versiyasi
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
 }
 
 jar {
@@ -57,5 +56,4 @@ jar {
         ])
     }
 }
-
 jar.finalizedBy 'reobfJar'
