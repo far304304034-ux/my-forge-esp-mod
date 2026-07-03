@@ -33,7 +33,7 @@ public class PlayerMod {
 
     @SubscribeEvent
     public void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase == TickEvent.Phase.END && toggleKey != null && toggleKey.isPressed()) {
+        if (event.phase == TickEvent.Phase.END && toggleKey != null && toggleKey.consumeClick()) {
             espEnabled = !espEnabled;
             // O'yin ichida rejim o'zgarganini bildirish
             if (Minecraft.getInstance().player != null) {
