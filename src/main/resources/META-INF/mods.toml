@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="playermod"
+version="1.0"
+displayName="Player ESP Mod"
+authors="far304304034"
+description="U tugmasini bosganda o'yinchilarni devor ortidan ko'rsatadigan mod."
